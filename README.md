@@ -1,1 +1,1 @@
-# restaurant
+# Restaurant - A restaurant table booking system
