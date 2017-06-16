@@ -13,6 +13,9 @@ const logger = require("morgan");
 //User model for authentication
 const User = require("./models/User.js");
 
+//Routes
+const routes = require("./routes/routes.js");
+
 //View engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
@@ -47,5 +50,7 @@ mongoose.connection.on("error", (error) => {
 mongoose.connection.on("connected", () => {
   console.log("Connection to database established!");
 });
+
+app.use("/", routes);
 
 module.exports = app;
