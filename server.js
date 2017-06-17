@@ -19,7 +19,7 @@ const routes = require("./routes/routes.js");
 //View engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
-app.use("/public", express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(logger("dev"));
 
 app.use(bodyParser.json());
