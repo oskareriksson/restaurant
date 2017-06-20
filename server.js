@@ -15,6 +15,7 @@ const User = require("./models/User.js");
 
 //Routes
 const routes = require("./routes/routes.js");
+const userRoutes = require("./routes/users.js");
 
 //View engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -52,5 +53,6 @@ mongoose.connection.on("connected", () => {
 });
 
 app.use("/", routes);
+app.use("/users", userRoutes);
 
 module.exports = app;
