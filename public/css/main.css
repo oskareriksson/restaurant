@@ -1,0 +1,24 @@
+body {
+  /* IE10+ */ 
+  background-image: -ms-radial-gradient(center, ellipse farthest-corner, rgba(51,51,255,1) 0%, rgba(125,185,232,1) 100%);
+
+  /* Mozilla Firefox */ 
+  background-image: -moz-radial-gradient(center, ellipse farthest-corner, rgba(51,51,255,1) 0%, rgba(125,185,232,1) 100%);
+
+  /* Opera */ 
+  background-image: -o-radial-gradient(center, ellipse farthest-corner, rgba(51,51,255,1) 0%, rgba(125,185,232,1) 100%);
+
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(radial, center center, 0, center center, 286, color-stop(0, rgba(51,51,255,1)), color-stop(100, rgba(125,185,232,1)));
+
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-radial-gradient(center, ellipse farthest-corner, rgba(51,51,255,1) 0%, rgba(125,185,232,1) 100%);
+
+  color: white;
+}
+
+form {
+  margin: 0 auto;
+  width: 50%;
+}
+
