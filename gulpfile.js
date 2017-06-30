@@ -9,5 +9,7 @@ gulp.task("less", () => {
 });
 
 gulp.task("default", () => {
-
+  gulp.watch("./public/css/style.less", (event) => {
+    gulp.run("less");
+  });
 });
