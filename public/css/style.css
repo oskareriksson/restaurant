@@ -36,10 +36,17 @@ body {
 .divwrapper p {
   text-shadow: 2px 2px 8px #000;
 }
-.form {
+.divwrapper .form {
   margin: 0 auto;
   width: 50%;
 }
-.form input:hover {
+.divwrapper .form label {
+  font-weight: 100;
+  font-size: 18px;
+}
+.divwrapper .form input:hover {
   box-shadow: 0px 0px 22px -5px #5BC8EF;
+}
+.divwrapper .form button {
+  padding: 6px 20px;
 }
