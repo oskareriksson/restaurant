@@ -32,6 +32,10 @@ body {
 .divwrapper {
   margin-top: 10%;
 }
+.divwrapper h1,
+.divwrapper p {
+  text-shadow: 2px 2px 8px #000;
+}
 .form {
   margin: 0 auto;
   width: 50%;
