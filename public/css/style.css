@@ -50,3 +50,27 @@ body {
 .divwrapper .form button {
   padding: 6px 20px;
 }
+.divwrapper .seatwrapper .table1 div {
+  margin: 5px 5px;
+  height: 20px;
+  width: 20px;
+  background-color: green;
+}
+.divwrapper .seatwrapper .table2 {
+  margin: 5% 0;
+}
+.divwrapper .seatwrapper .table2 div {
+  margin: 5px 5px;
+  height: 20px;
+  width: 20px;
+  background-color: green;
+}
+.divwrapper .seatwrapper .table3 {
+  margin: 5% 0;
+}
+.divwrapper .seatwrapper .table3 div {
+  margin: 5px 5px;
+  height: 20px;
+  width: 20px;
+  background-color: green;
+}
