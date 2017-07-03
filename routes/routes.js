@@ -7,4 +7,11 @@ router.get("/", (req, res) => {
   });
 });
 
+//Overview route
+router.get("/overview", (req, res) => {
+  res .render("overview", {
+    title: "Table Overview"
+  });
+});
+
 module.exports = router;
