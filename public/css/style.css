@@ -52,6 +52,7 @@ body {
 }
 .divwrapper .seatwrapper .table1 {
   width: 15%;
+  margin: 0 auto;
 }
 .divwrapper .seatwrapper .table1 div {
   display: inline-block;
@@ -61,8 +62,8 @@ body {
   background-color: green;
 }
 .divwrapper .seatwrapper .table2 {
-  margin: 5% 0;
   width: 15%;
+  margin: 5% auto;
 }
 .divwrapper .seatwrapper .table2 div {
   display: inline-block;
@@ -72,8 +73,8 @@ body {
   background-color: green;
 }
 .divwrapper .seatwrapper .table3 {
-  margin: 5% 0;
   width: 10%;
+  margin: 5% auto;
 }
 .divwrapper .seatwrapper .table3 div {
   display: inline-block;
