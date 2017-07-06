@@ -1,7 +1,9 @@
-language: javascript
+language: node_js
 cache:
   directories:
     - "node_modules"
 branches:
   only:
     - tests
+notifications:
+  email: false
