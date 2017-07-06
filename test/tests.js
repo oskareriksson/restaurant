@@ -29,4 +29,15 @@ describe("General routes Tests", () => {
         done(err);
       });
   });
+
+  //This test gets the overview view.
+  it("Should get the overview view", (done) => {
+    chai.request(app)
+      .get("/overview")
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.have.header("content-type", "text/html; charset=utf-8");
+        done(err);
+      });
+  });
 });
