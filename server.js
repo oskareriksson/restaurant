@@ -57,4 +57,9 @@ app.use("/", routes);
 app.use("/users", userRoutes);
 app.use("/reservations", reservationRoutes);
 
+//404 Handler
+app.use(function (req, res, next) {
+  res.status(404).send("Sorry can't find that!");
+});
+
 module.exports = app;
