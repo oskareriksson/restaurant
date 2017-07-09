@@ -21,4 +21,14 @@ router.post("/register", (req, res) => {
     });
 });
 
+//Route for getting all users
+router.get("/all", (req, res) => {
+  User.find({}, "username admin", (error, result) => {
+    if(error) res.send(error);
+    res.json(result);
+  });
+});
+
+
+
 module.exports = router;
