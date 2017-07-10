@@ -54,4 +54,14 @@ describe("Routes tests", () => {
         done(err);
       });
   });
+
+  it("Should get all reservations in database", (done) => {
+    chai.request(app)
+      .get("/reservations")
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.have.header("content-type", "application/json; charset=utf-8");
+        done(err);
+      });
+  });
 });
