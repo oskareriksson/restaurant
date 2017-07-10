@@ -6,7 +6,7 @@ const should = chai.should();
 chai.use(require("chai-things"));
 chai.use(chaiHttp);
 
-describe("General routes Tests", () => {
+describe("View tests", () => {
 
   //This test gets the index view.
   it("Should get the index view", (done) => {
@@ -37,6 +37,30 @@ describe("General routes Tests", () => {
       .end((err, res) => {
         res.should.have.status(200);
         res.should.have.header("content-type", "text/html; charset=utf-8");
+        done(err);
+      });
+  });
+});
+
+describe("Routes tests", () => {
+
+  //This test should get all users in database
+  it("Should get all users in database", (done) => {
+    chai.request(app)
+      .get("/users/all")
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.have.header("content-type", "application/json; charset=utf-8");
+        done(err);
+      });
+  });
+
+  it("Should get all reservations in database", (done) => {
+    chai.request(app)
+      .get("/reservations")
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.have.header("content-type", "application/json; charset=utf-8");
         done(err);
       });
   });
