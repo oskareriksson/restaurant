@@ -64,4 +64,14 @@ describe("Routes tests", () => {
         done(err);
       });
   });
+
+  it("Should fail to post a user to the database because of a missing password", (done) => {
+    chai.request(app)
+      .post("users/register")
+      .send({ username: "asd"})
+      .end((err, res) => {
+        console.log(res.text);
+        done(err);
+      });
+  });
 });
