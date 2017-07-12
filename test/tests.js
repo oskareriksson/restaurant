@@ -65,13 +65,15 @@ describe("Routes tests", () => {
       });
   });
 
-  /*it("Should fail to post a user to the database because of a missing password", (done) => {
+  it("Should fail to post a user to the database because of a missing password", (done) => {
     chai.request(app)
-      .post("users/register")
+      .post("/users/register")
       .send({ username: "asd"})
       .end((err, res) => {
-        console.log(res.text);
+        res.should.have.status(200);
+        res.should.have.header("content-type", "application/json; charset=utf-8");
+        res.body.should.have.property("message").eql("No password was given");
         done(err);
       });
-  });*/
+  });
 });
