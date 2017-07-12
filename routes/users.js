@@ -16,8 +16,11 @@ router.post("/register", (req, res) => {
       username: req.body.username,
       password:req.body.password
     }), req.body.password, (error, user) => {
-      if(error) res.send(error);
-      res.send("User successfully added!");
+      if(error){
+        res.send(error);
+      } else {
+        res.send("User successfully added!");
+      }
     });
 });
 
