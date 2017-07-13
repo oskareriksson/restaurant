@@ -44,6 +44,9 @@ router.get("/all", (req, res) => {
   });
 });
 
-
+//Route for redirecting you to the index page with req.user set
+router.get("/", isLoggedIn, (req, res) => {
+  res.render("index", { user: req.user});
+});
 
 module.exports = router;
