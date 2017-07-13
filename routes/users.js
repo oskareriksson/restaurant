@@ -2,6 +2,12 @@ const router = require("express").Router();
 const passport = require("passport");
 const User = require("../models/User.js");
 
+//Function that checks if a user is logged in
+const isLoggedIn = (req, res, next) => {
+  if(req.isAuthenticated()) return next();
+  res.redirect("/");
+};
+
 //Renders register.hbs
 router.get("/register", (req, res) => {
   res.render("register", {
