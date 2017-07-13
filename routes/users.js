@@ -2,6 +2,12 @@ const router = require("express").Router();
 const passport = require("passport");
 const User = require("../models/User.js");
 
+//Function that checks if a user is logged in
+const isLoggedIn = (req, res, next) => {
+  if(req.isAuthenticated()) return next();
+  res.redirect("/");
+};
+
 //Renders register.hbs
 router.get("/register", (req, res) => {
   res.render("register", {
@@ -24,6 +30,12 @@ router.post("/register", (req, res) => {
     });
 });
 
+//Route for logging in
+router.post("/login", passport.authenticate("local"), (req, res) => {
+  console.log("\n" + "Successfully logged in!");
+  res.redirect("/");
+});
+
 //Route for getting all users
 router.get("/all", (req, res) => {
   User.find({}, "username admin", (error, result) => {
@@ -32,6 +44,9 @@ router.get("/all", (req, res) => {
   });
 });
 
-
+//Route for redirecting you to the index page with req.user set
+router.get("/", isLoggedIn, (req, res) => {
+  res.render("index", { user: req.user});
+});
 
 module.exports = router;
