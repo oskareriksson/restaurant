@@ -24,6 +24,12 @@ router.post("/register", (req, res) => {
     });
 });
 
+//Route for logging in
+router.post("/login", passport.authenticate("local"), (req, res) => {
+  console.log("\n" + "Successfully logged in!");
+  res.redirect("/");
+});
+
 //Route for getting all users
 router.get("/all", (req, res) => {
   User.find({}, "username admin", (error, result) => {
