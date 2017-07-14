@@ -76,4 +76,15 @@ describe("Routes tests", () => {
         done(err);
       });
   });
+
+  it("Should log in the user", (done) => {
+    chai.request(app)
+      .post("/users/login")
+      .send({ username: "notadminm8", password: "qwe123"})
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.have.header("content-type", "text/html; charset=utf-8");
+        done(err);
+      });
+  });
 });
