@@ -77,6 +77,17 @@ describe("Routes tests", () => {
       });
   });
 
+  /*it("Should fail to log in the user", (done) => {
+    chai.request(app)
+      .post("/users/login")
+      .send({ username: "notadminm8"})
+      .end((err, res) => {
+        res.should.have.status(400);
+        console.log(res);
+        done(err);
+      });
+  });*/
+
   it("Should log in the user", (done) => {
     chai.request(app)
       .post("/users/login")
