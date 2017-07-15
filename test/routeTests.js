@@ -19,6 +19,7 @@ describe("Routes tests", () => {
       });
   });
 
+  //This test gets all the reservations in database
   it("Should get all reservations in database", (done) => {
     chai.request(app)
       .get("/reservations")
@@ -29,6 +30,7 @@ describe("Routes tests", () => {
       });
   });
 
+  //This test fails to post a user to the database because of a missing password
   it("Should fail to post a user to the database because of a missing password", (done) => {
     chai.request(app)
       .post("/users/register")
@@ -52,6 +54,7 @@ describe("Routes tests", () => {
       });
   });*/
 
+  //This test logs in the user
   it("Should log in the user", (done) => {
     chai.request(app)
       .post("/users/login")
