@@ -30,19 +30,22 @@ body {
   color: white;
 }
 .nav {
-  margin: 30px 0;
+  margin: 5% auto;
   text-align: center;
+}
+.nav ul {
+  margin: 0 auto;
+  padding: 0;
 }
 .nav ul li {
   display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid #7db9e8;
 }
 .nav ul li a {
-  margin: 0 20px;
   font-size: 18px;
   color: white;
-}
-.divwrapper {
-  margin-top: 10%;
+  text-decoration: none;
 }
 .divwrapper h1,
 .divwrapper p {
