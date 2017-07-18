@@ -29,20 +29,27 @@ body {
   font-family: "Raleway", sans-serif;
   color: white;
 }
-.divwrapper {
-  margin-top: 10%;
+.nav {
+  margin: 5% auto;
+  text-align: center;
+}
+.nav ul {
+  margin: 0 auto;
+  padding: 0;
+}
+.nav ul li {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid #7db9e8;
+}
+.nav ul li a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
 }
 .divwrapper h1,
 .divwrapper p {
   text-shadow: 2px 2px 8px #000;
-}
-.divwrapper .nav ul li {
-  display: inline-block;
-}
-.divwrapper .nav ul li a {
-  margin: 0 20px;
-  font-size: 18px;
-  color: white;
 }
 .divwrapper .form {
   margin: 0 auto;
